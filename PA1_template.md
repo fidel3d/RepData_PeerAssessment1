@@ -4,7 +4,7 @@ output:
   html_document:
     keep_md: true
 editor_options: 
-  chunk_output_type: console
+  chunk_output_type: inline
 ---
 
 ## ***Introduction***

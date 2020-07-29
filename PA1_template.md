@@ -234,7 +234,7 @@ ggplot(data = total_steps_daily, aes(steps.daily)) +
 ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ```
 
-![](PA1_template_files/figure-html/Histogram of the total number of steps taken each day-1.png)<!-- -->
+![](PA1_template_files/figure-html/plot1.png)<!-- -->
 
 3. Calculate and report the mean and median of the total number of steps taken per day.  
 
@@ -443,7 +443,7 @@ ggplot(data = total_steps_daily2, aes(steps.daily)) +
 ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-1-1.png)<!-- -->
+![](PA1_template_files/figure-html/plot2.png)<!-- -->
 
 Calculate and report the mean and median of the total number of steps taken per day with imputed data. 
 
@@ -515,7 +515,7 @@ ggplot(allintervals, aes(x = interval, y = steps, color = weektype)) +
   theme(plot.title = element_text(hjust = 0.5))           # Center ggplot title
 ```
 
-![](PA1_template_files/figure-html/lotting the difference between the two factors-1.png)<!-- -->
+![](PA1_template_files/figure-html/plot4.png)<!-- -->
 
 ```r
 # Alternative plot
@@ -527,5 +527,5 @@ ggplot(allintervals, aes(x = interval, y = steps)) +
   theme(plot.title = element_text(hjust = 0.5))           # Center ggplot title
 ```
 
-![](PA1_template_files/figure-html/lotting the difference between the two factors-2.png)<!-- -->
+![](PA1_template_files/figure-html/plot5.png)<!-- -->
 

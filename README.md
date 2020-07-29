@@ -1,15 +1,5 @@
----
-title: "Reproducible Research - Week 02 - Project 1"
-output: 
-  html_document:
-    df_print: paged
-  word_document: default
-  html_notebook: 
-    code_folding: hide
-  pdf_document: default
-editor_options:
-  chunk_output_type: inline 
----
+
+# Reproducible Research - Week 02 - Project 1
 
 
 ### Introduction

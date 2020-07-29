@@ -4,7 +4,7 @@ output:
   html_document:
     keep_md: true
 editor_options: 
-  chunk_output_type: inline
+  chunk_output_type: console
 ---
 
 ## ***Introduction***
@@ -129,7 +129,9 @@ total_steps_daily <- mydfr %>%                      # assigning the result to to
 
 2. Make a histogram of the total number of steps taken each day.  
 
-```{r, Histogram of the total number of steps taken each day, echo = TRUE}
+- Added a vertical red line to show the mean values  
+
+```{r, plot1, echo = TRUE}
 # Histogram of the total number of steps taken each day
 
 ggplot(data = total_steps_daily, aes(steps.daily)) + 
@@ -170,7 +172,7 @@ total_interval_daily <- mydfr %>%                      # assigning the result to
 
 Creating the Plot
 
-```{r, plotting total_interval_daily, echo = TRUE}
+```{r, plot2, echo = TRUE}
 # Plotting the data
 
 ggplot(data = total_interval_daily, aes(x = interval, y = steps.mean)) +
@@ -257,7 +259,9 @@ total_steps_daily2 <- mydfall %>%                      # assigning the result to
 
 4. Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?  
 
-```{r}
+- Added a vertical red line to show the mean values  
+
+```{r, plot3, echo = TRUE}
 # Histogram of the total number of steps taken each day
 
 ggplot(data = total_steps_daily2, aes(steps.daily)) + 
@@ -312,7 +316,7 @@ allintervals <- mydfall %>%
 
 2. Make a panel plot containing a time series plot (i.e. type=“l”) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis).  
 
-```{r, lotting the difference between the two factors, echo = TRUE}
+```{r, plot4, echo = TRUE}
 # plotting the difference between the two factors weekend and weekday
 
 ggplot(allintervals, aes(x = interval, y = steps, color = weektype)) +
@@ -323,7 +327,11 @@ ggplot(allintervals, aes(x = interval, y = steps, color = weektype)) +
        y = "Average Daily Steps") +         # add the main title, y and x title
   theme(plot.title = element_text(hjust = 0.5))           # Center ggplot title
 
+```
+
+```{r, plot5, echo = TRUE}
 # Alternative plot
+
 ggplot(allintervals, aes(x = interval, y = steps)) +
   geom_line(aes(color = weektype)) +
   theme_bw() +

@@ -4,7 +4,7 @@ output:
   html_document:
     keep_md: true
 editor_options: 
-  chunk_output_type: inline
+  chunk_output_type: console
 ---
 
 ## ***Introduction***
@@ -217,6 +217,8 @@ total_steps_daily <- mydfr %>%                      # assigning the result to to
 
 2. Make a histogram of the total number of steps taken each day.  
 
+- Added a vertical red line to show the mean values  
+
 
 ```r
 # Histogram of the total number of steps taken each day
@@ -234,7 +236,7 @@ ggplot(data = total_steps_daily, aes(steps.daily)) +
 ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ```
 
-![](PA1_template_files/figure-html/plot1.png)<!-- -->
+![](PA1_template_files/figure-html/plot1-1.png)<!-- -->
 
 3. Calculate and report the mean and median of the total number of steps taken per day.  
 
@@ -289,7 +291,7 @@ ggplot(data = total_interval_daily, aes(x = interval, y = steps.mean)) +
   theme(plot.title = element_text(hjust = 0.5))           # Center ggplot title
 ```
 
-![](PA1_template_files/figure-html/plot2.png)<!-- -->
+![](PA1_template_files/figure-html/plot2-1.png)<!-- -->
 
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -426,6 +428,8 @@ total_steps_daily2 <- mydfall %>%                      # assigning the result to
 
 4. Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?  
 
+- Added a vertical red line to show the mean values  
+
 
 ```r
 # Histogram of the total number of steps taken each day
@@ -443,7 +447,7 @@ ggplot(data = total_steps_daily2, aes(steps.daily)) +
 ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ```
 
-![](PA1_template_files/figure-html/plot3.png)<!-- -->
+![](PA1_template_files/figure-html/plot3-1.png)<!-- -->
 
 Calculate and report the mean and median of the total number of steps taken per day with imputed data. 
 
@@ -515,10 +519,12 @@ ggplot(allintervals, aes(x = interval, y = steps, color = weektype)) +
   theme(plot.title = element_text(hjust = 0.5))           # Center ggplot title
 ```
 
-![](PA1_template_files/figure-html/plot4.png)<!-- -->
+![](PA1_template_files/figure-html/plot4-1.png)<!-- -->
+
 
 ```r
 # Alternative plot
+
 ggplot(allintervals, aes(x = interval, y = steps)) +
   geom_line(aes(color = weektype)) +
   theme_bw() +
@@ -527,5 +533,5 @@ ggplot(allintervals, aes(x = interval, y = steps)) +
   theme(plot.title = element_text(hjust = 0.5))           # Center ggplot title
 ```
 
-![](PA1_template_files/figure-html/plot5.png)<!-- -->
+![](PA1_template_files/figure-html/plot5-1.png)<!-- -->
 
